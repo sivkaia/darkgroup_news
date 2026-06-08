@@ -30,7 +30,7 @@ fg.title("Arkitektkontorer - Sortert etter dato")
 fg.description("Google News sortert kronologisk")
 fg.link(href="https://github.com")
 
-for date, item in reversed(entries):
+for date, item in entries[::-1]:
     fe = fg.add_entry()
     fe.title(item.title)
     fe.link(href=item.link)

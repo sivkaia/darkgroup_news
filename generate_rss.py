@@ -4,6 +4,11 @@ from email.utils import parsedate_to_datetime
 
 SOURCE_RSS = 'https://news.google.com/rss/search?q=("Dark%20Arkitekter"%20OR%20"Dark%20Design%20Group"%20OR%20"Lark%20Landskap"%20OR%20"Zinc%20interiør"%20OR%20"HK%20Arkitekter"%20OR%20"Heggelund%20%26%20Koxvold%20Arkitekter")&hl=no&gl=NO&ceid=NO:no'
 
+print("=== SORTERT LISTE ===")
+
+for date, item in entries[:10]:
+    print(date, item.title)
+
 feed = feedparser.parse(SOURCE_RSS)
 
 entries = []
